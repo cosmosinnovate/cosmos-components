@@ -1,16 +1,14 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
 
-export interface HStackProps {
+export interface CenterProps {
   gap?: number;
   rounded?: number;
   position?: string;
-  width?: string;
   height?: string;
+  width?: string;
   color?: string;
   backgroundColor?: string;
-  alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?: "start" | "space-between" | "space-around" | "space-evenly";
   sx?: {
     pl?: number;
     pr?: number;
@@ -32,16 +30,16 @@ export interface HStackProps {
  * @param sx?: object
  * @param children?: component
  */
-export const StyledHStack = styled.div<HStackProps>`
+export const StyledCenter = styled.div<CenterProps>`
   display: flex;
-  flex-direction: row;
-  width: 100% !important;
-  gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
+  // flex-direction: column;
 
   width: ${(props) => (props.width ? props.width : "auto")} !important;
   height: ${(props) => (props.height ? props.height : "auto")} !important;
 
   position: ${(props) => props.position && props.position} !important;
+
+  gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
 
   padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
   padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
@@ -57,46 +55,34 @@ export const StyledHStack = styled.div<HStackProps>`
     props.backgroundColor || props.sx?.backgroundColor
       ? props.backgroundColor || props.sx?.backgroundColor
       : "transparent"} !important;
-  justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : `start`};
-  align-items: ${(props) =>
-    props.alignItems ? props.alignItems : `auto`} !important;
-  @media (max-width: 786px) {
-    width: 100% !important;
-    flex-grow: 1 !important;
-    flex-wrap: ${(props) => (!props.wrap ? "nowrap" : props.wrap)} !important;
-  }
+  align-items: center !important;
+  justify-content: center !important;
 `;
 
-const HStack: FC<HStackProps> = ({
+const Center: FC<CenterProps> = ({
   sx,
-  wrap,
   width,
   height,
   position,
+  wrap,
   backgroundColor,
   rounded,
-  alignItems,
-  justifyContent,
   children,
   ...props
 }) => {
   return (
-    <StyledHStack
+    <StyledCenter
       sx={sx}
       width={width}
       height={height}
-      position={position}
       wrap={wrap}
       backgroundColor={backgroundColor}
       rounded={rounded}
-      alignItems={alignItems}
-      justifyContent={justifyContent}
       {...props}
     >
       {children}
-    </StyledHStack>
+    </StyledCenter>
   );
 };
 
-export default HStack;
+export default Center;

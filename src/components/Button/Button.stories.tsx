@@ -14,7 +14,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 // Reuse that template for creating different stories
 export const Primary = Template.bind({});
-Primary.args = { label: "Primary 😃", type: "button", onClick: () => { alert('I am primary button')} };
+Primary.args = { children: "Primary 😃", type: "button", onClick: () => { alert('I am primary button')} };
 
 export const Secondary = Template.bind({});
-Secondary.args = { ...Primary.args, label: "Secondary 😇", type: "button", onClick: () => { alert('I am secondary button')}};
+Secondary.args = { ...Primary.args, children: "Secondary 😇", type: "button", onClick: () => { alert('I am secondary button')}};
