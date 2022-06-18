@@ -2,8 +2,7 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Article, { ArticleProps } from "./Article";
-import Button from "../Button";
-import Center from "../Center";
+import "./article.css";
 
 export default {
   title: "Components/Article",
