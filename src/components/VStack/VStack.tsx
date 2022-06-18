@@ -1,52 +1,66 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react";
+import styled from "styled-components";
 
 export interface VStackProps {
   gap?: number;
   width?: string;
   position?: string;
-  height?: string
+  height?: string;
   rounded?: number;
   backgroundColor?: string;
   color?: string;
   alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?: "start" |"space-between" | "space-around" | "space-evenly" | "center";
+  justifyContent?:
+    | "start"
+    | "space-between"
+    | "space-around"
+    | "space-evenly"
+    | "center";
   wrap?: "wrap" | "nowrap";
   children?: any;
-  sx?: { pl?: number, pr?: number, pt?: number, pb?: number, padding?: number, backgroundColor?: string };
+  sx?: {
+    pl?: number;
+    pr?: number;
+    pt?: number;
+    pb?: number;
+    padding?: number;
+    backgroundColor?: string;
+  };
 }
 
 export const StyledVStack = styled.div<VStackProps>`
   display: flex;
   flex-direction: column;
-  gap:${props => props.gap ? props.gap : 10}px !important;
+  gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
 
-  width: ${props => props.width ? props.width : 'auto'} !important;
-  height: ${props => props.height ? props.height : 'auto'} !important;  
-  
-  position: ${props => props.position && props.position} !important;
+  width: ${(props) => (props.width ? props.width : "auto")} !important;
+  height: ${(props) => (props.height ? props.height : "auto")} !important;
 
-  padding: ${props => props.sx?.padding && props.sx?.padding}px !important;
-  padding-left:${props => props.sx?.pl && props.sx?.pl}px !important;
-  padding-right:${props => props.sx?.pr && props.sx?.pr}px !important;
-  padding-top:${props => props.sx?.pt && props.sx?.pt}px !important;
-  padding-bottom:${props => props.sx?.pb && props.sx?.pb}px important;
+  position: ${(props) => props.position && props.position} !important;
 
-  border-radius:${props => props.rounded ? props.rounded : 2}px !important;
-  align-items:${props => props.alignItems && props.alignItems} !important;
-  justify-content:${props => props.justifyContent && props.justifyContent} !important;
-  color: ${props => props.color ? props.color : '#000'} !important;
-  background:${props => props.backgroundColor ? props.backgroundColor  : 'transparent'} !important;
-  @media(min-width: 786px) {
+  padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
+  padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
+  padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
+  padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
+  padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
+
+  border-radius: ${(props) => (props.rounded ? props.rounded : 2)}px !important;
+  align-items: ${(props) => props.alignItems && props.alignItems} !important;
+  justify-content: ${(props) =>
+    props.justifyContent && props.justifyContent} !important;
+  color: ${(props) => (props.color ? props.color : "#000")} !important;
+  background: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : "transparent"} !important;
+  @media (min-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    margin: 0px  !important;
+    margin: 0px !important;
   }
 
-  @media(max-width: 786px) {
+  @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    margin: 0px  !important;
+    margin: 0px !important;
   }
 `;
 
@@ -66,18 +80,19 @@ const VStack: FC<VStackProps> = ({
   return (
     <StyledVStack
       sx={sx}
-          width={width}
-    height={height}
-    position={position}
+      width={width}
+      height={height}
+      position={position}
       color={color}
       backgroundColor={backgroundColor}
       rounded={rounded}
       alignItems={alignItems}
       justifyContent={justifyContent}
-      {...props}>
-    {children}
+      {...props}
+    >
+      {children}
     </StyledVStack>
-  )
-}
+  );
+};
 
 export default VStack;

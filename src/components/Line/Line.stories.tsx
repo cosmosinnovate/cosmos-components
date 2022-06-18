@@ -15,5 +15,6 @@ const Template: Story<LineProps> = (args) => <Line {...args} />;
 // Reuse that template for creating different stories
 export const LineView = Template.bind({});
 LineView.args = {
-  backgroundColor: "#000", width: 4
+  backgroundColor: "#000",
+  width: 4,
 };
