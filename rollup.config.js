@@ -28,10 +28,10 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
+      terser(),
       postcss({
         extensions: [ '.css' ]
-      }),
-      terser(),
+      })
     ],
   },
   {
