@@ -1,9 +1,9 @@
 {
-  "name": "@cosmosinnovation/cosmos-react-cmp",
+  "name": "@cosmosinnovation/cosmos-cmp-ui",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/cosmosinnovation"
   },
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "React Components",
   "types": "dist/index.d.ts",
   "scripts": {
