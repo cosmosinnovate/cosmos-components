@@ -33,6 +33,7 @@ export default [
         extensions: [ '.css' ]
       })
     ],
+    external: [ "react", "react-dom", "styled-components" ]
   },
   {
     input: 'dist/esm/types/index.d.ts',
