@@ -1,7 +1,7 @@
 {
-  "name": "@cosmosinnovate/cosmos-components",
+  "name": "@cosmosinnovation/cosmos-react-cmp",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/cosmosinnovate"
+    "registry": "https://npm.pkg.github.com/cosmosinnovation"
   },
   "version": "1.2.0",
   "description": "React Components",
