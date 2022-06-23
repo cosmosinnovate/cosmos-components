@@ -25,7 +25,7 @@ const StyledInput = styled.input<InputProps>`
         : props.success
         ? "#067d68"
         : "#353637"};
-  background-color: #fff;
+  background-color: #fff;  xxfx dfxdfxxx fd
   &:focus {
     border: solid 2px #1b116e;
   }
