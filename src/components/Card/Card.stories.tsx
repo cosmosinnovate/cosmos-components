@@ -22,7 +22,7 @@ CardView.args = {
 
 export const CardElevation = Template.bind({});
 CardElevation.args = {
-  backgroundColor: "#FFF",
+  backgroundColor: "#18A0FB",
   children: "CardElevation 😃",
   elevation: 1,
 };

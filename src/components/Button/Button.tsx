@@ -65,7 +65,7 @@ export interface ButtonProps {
 
   /**
    *  @string
-   * Poistion: absolute | relative | inherite
+   * Poistion: absolute | relative | inherit
    */
   position?: string;
 }

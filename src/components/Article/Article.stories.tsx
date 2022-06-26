@@ -3,6 +3,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
 import Article, { ArticleProps } from "./Article";
 import "./article.css";
+import Text from "../Text";
 
 export default {
   title: "Components/Article",
@@ -18,7 +19,7 @@ export const AritcleViewUI = Template.bind({});
 AritcleViewUI.args = {
   children: [
     <p> What is Lorem Ipsum?</p>,
-    <p>
+    <Text type="p" color="black">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to
@@ -28,7 +29,7 @@ AritcleViewUI.args = {
       sheets containing Lorem Ipsum passages, and more recently with desktop
       publishing software like Aldus PageMaker including versions of Lorem
       Ipsum.
-    </p>,
+    </Text>,
   ],
   backgroundColor: "pink",
   gap: 0,

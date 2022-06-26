@@ -17,9 +17,10 @@ import Button from "./Button";
 // children,
 
 describe("Button", () => {
-  test("renders the Button component", () => {
+  test("renders the Button component: large", () => {
     render(
       <Button
+        size="large"
         children="Hello world!"
         type={"button"}
         onClick={() => {
@@ -31,9 +32,10 @@ describe("Button", () => {
 });
 
 describe("Button", () => {
-  test("renders the Button component", () => {
+  test("renders the Button component: medium", () => {
     render(
       <Button
+        size="medium"
         position="absolute"
         children="Hello world!"
         type={"button"}
@@ -46,9 +48,10 @@ describe("Button", () => {
 });
 
 describe("Button", () => {
-  test("renders the Button component", () => {
+  test("renders the Button component: small", () => {
     render(
       <Button
+        size="small"
         position="absolute"
         children="Hello world!"
         type={"button"}
@@ -56,6 +59,94 @@ describe("Button", () => {
           console.info("Button");
         }}
       />
+    );
+  });
+});
+
+describe("Button", () => {
+  test("renders the Button component: elevation", () => {
+    render(
+      <Button
+        elevation={2}
+        size="small"
+        position="absolute"
+        children="Hello world!"
+        type={"button"}
+        onClick={() => {
+          console.info("Button");
+        }}
+      />
+    );
+  });
+});
+
+describe("Button", () => {
+  test("renders the Button component: rounded", () => {
+    render(
+      <Button
+        rounded={20}
+        elevation={2}
+        size="small"
+        position="absolute"
+        children="Hello world!"
+        type={"button"}
+        onClick={() => {
+          console.info("Button");
+        }}
+      />
+    );
+  });
+});
+
+describe("Button", () => {
+  test("renders the Button component: disabled", () => {
+    render(
+      <Button
+        disabled={true}
+        elevation={2}
+        size="small"
+        position="absolute"
+        children="Hello world!"
+        type={"button"}
+        onClick={() => {
+          console.info("Button");
+        }}
+      />
+    );
+  });
+});
+
+describe("Button", () => {
+  test("renders the Button component: position", () => {
+    render(
+      <Button
+        disabled={true}
+        elevation={2}
+        size="small"
+        position="absolute"
+        children="Hello world!"
+        type={"button"}
+        onClick={() => {
+          console.info("Button");
+        }}
+      />
+    );
+  });
+});
+
+describe("Button", () => {
+  test("renders the Button component: children", () => {
+    render(
+      <Button
+        size="small"
+        position="absolute"
+        type={"submit"}
+        onClick={() => {
+          console.info("Button");
+        }}
+      >
+        Submit
+      </Button>
     );
   });
 });
