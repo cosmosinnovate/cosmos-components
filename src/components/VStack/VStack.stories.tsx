@@ -1,9 +1,11 @@
-import React from "react";
-import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import VStack, { VStackProps } from "./VStack";
+import { Meta } from "@storybook/react/types-6-0";
+import { default as React } from "react";
 import Button from "../Button";
 import Center from "../Center";
+import HStack from "../HStack";
+import Text from "../Text";
+import VStack, { VStackProps } from "./VStack";
 
 export default {
   title: "Components/VStack",
@@ -75,4 +77,53 @@ ColumnViewUI.args = {
   justifyContent: "center",
   sx: { padding: 10 },
   color: "#FFF",
+};
+
+// Reuse that template for creating different stories
+export const HeroLayout = Template.bind({});
+HeroLayout.args = {
+  backgroundColor: "#18A0FB",
+  height: "100vh",
+  children: (
+    <>
+      <HStack sx={{ pl: 10, pr: 10 }} justifyContent="space-between">
+        <Text type="p">Cosmos Innovaiton</Text>
+        <HStack>
+          <Text type="p" color="#FFF">
+            About
+          </Text>
+          <Text type="p" color="#FFF">
+            Process
+          </Text>
+          <Text type="p" color="#FFF">
+            Investments
+          </Text>
+          <Text type="p" color="#FFF">
+            Startups
+          </Text>
+          <Text type="p" color="#FFF">
+            Blog
+          </Text>
+        </HStack>
+      </HStack>
+      <VStack alignItems="center" justifyContent="center">
+        <Center>
+          <VStack alignItems="center">
+            <Text type="h2" weight={400} size={50} color={"#FFF"}>
+              Innovation starts here
+            </Text>
+            <Text>Time to unleash your product potential today</Text>
+            <Button
+              type={"button"}
+              onClick={() => alert("You got me")}
+              width={400}
+              rounded={40}
+            >
+              TALK TO US
+            </Button>
+          </VStack>
+        </Center>
+      </VStack>
+    </>
+  ),
 };
