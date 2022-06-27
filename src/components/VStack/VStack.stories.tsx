@@ -8,11 +8,6 @@ import HStack from "../HStack";
 import Line from "../Line";
 import Text from "../Text";
 import VStack, { VStackProps } from "./VStack";
-import AboutImage1 from "../../assets/about-image-1.svg";
-import AboutImage2 from "../../assets/about-image-2.svg";
-import AboutImage3 from "../../assets/about-image-3.svg";
-import AboutImage4 from "../../assets/about-image-4.svg";
-import DownPageIcon from "../../assets/down-page-arrow.svg";
 
 export default {
   title: "Components/VStack",
@@ -141,9 +136,7 @@ Hero.args = {
             </Text>
           </Button>
         </VStack>
-        <VStack alignItems="center">
-          <img src={DownPageIcon} alt="down page" width={40} />
-        </VStack>
+        <VStack alignItems="center"></VStack>
       </VStack>
 
       {/* About */}
@@ -173,7 +166,6 @@ Hero.args = {
           >
             <Text>TRUSTWORTHY TEAM</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <img src={AboutImage1} alt="image 1" />
             <Text weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
@@ -188,7 +180,6 @@ Hero.args = {
           >
             <Text>IMPACT DRIVEN</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <img src={AboutImage2} alt="image 2" />
             <Text weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
@@ -203,7 +194,6 @@ Hero.args = {
           >
             <Text>QUALITY SOLUTION</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <img src={AboutImage3} alt="image 3" />
             <Text weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
@@ -218,7 +208,6 @@ Hero.args = {
           >
             <Text>STARTUP EXPERIENCE</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <img src={AboutImage4} alt="image 4" />
             <Text weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
