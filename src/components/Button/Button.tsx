@@ -6,7 +6,7 @@ export interface ButtonProps {
    * @string
    * Label appears in the button
    */
-  children?: string;
+  children?: string | any;
 
   /**
    * @string
@@ -99,6 +99,7 @@ const StyledButton = styled.button<ButtonProps>`
     props.elevation
       ? `0px 1px 20px rgba(0, 0, 0, 0.${props.elevation})`
       : `0px 1px 20px rgba(0, 0, 0, 0.1)`};
+  // On small screen, take the whole width unless user selects button width
 `;
 
 const Button: FC<ButtonProps> = ({

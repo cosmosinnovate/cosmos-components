@@ -66,6 +66,7 @@ export const StyledVStack = styled.div<VStackProps>`
 
 const VStack: FC<VStackProps> = ({
   sx,
+  gap,
   width,
   height,
   position,
@@ -79,6 +80,7 @@ const VStack: FC<VStackProps> = ({
 }) => {
   return (
     <StyledVStack
+      gap={gap}
       sx={sx}
       width={width}
       height={height}

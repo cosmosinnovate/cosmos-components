@@ -107,22 +107,31 @@ HeroLayout.args = {
         </HStack>
       </HStack>
       <VStack alignItems="center" justifyContent="center">
-        <Center>
-          <VStack alignItems="center">
-            <Text type="h2" weight={400} size={50} color={"#FFF"}>
-              Innovation starts here
+        <VStack alignItems="center" gap={10}>
+          <Text
+            type="h1"
+            weight={400}
+            size={80}
+            color={"#FFF"}
+            textAlign="center"
+          >
+            Innovation starts here
+          </Text>
+          <Text type="h2" size={40} textAlign="center" weight={400}>
+            Time to unleash your product potential today
+          </Text>
+          <Button
+            size={"medium"}
+            type={"button"}
+            onClick={() => alert("You got me")}
+            width={200}
+            rounded={40}
+          >
+            <Text type="span" color="white" weight={400} size={20}>
+              Hit me up
             </Text>
-            <Text>Time to unleash your product potential today</Text>
-            <Button
-              type={"button"}
-              onClick={() => alert("You got me")}
-              width={400}
-              rounded={40}
-            >
-              TALK TO US
-            </Button>
-          </VStack>
-        </Center>
+          </Button>
+        </VStack>
       </VStack>
     </>
   ),
