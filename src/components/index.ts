@@ -5,6 +5,7 @@ export { default as Center } from './Center';
 export { default as HStack } from './HStack';
 export { default as VStack } from './VStack';
 export { default as HLine } from './Line';
+export { default as Text } from './Text';
 
 
 
