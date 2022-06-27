@@ -68,6 +68,8 @@ export interface ButtonProps {
    * Poistion: absolute | relative | inherit
    */
   position?: string;
+
+  style?: any;
 }
 
 const StyledButton = styled.button<ButtonProps>`
@@ -104,6 +106,7 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button: FC<ButtonProps> = ({
   size,
+  style,
   position,
   primary,
   disabled,
@@ -116,6 +119,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <StyledButton
+      style={style}
       position={position}
       elevation={elevation}
       rounded={rounded}

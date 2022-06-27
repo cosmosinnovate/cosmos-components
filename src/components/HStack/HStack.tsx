@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export interface HStackProps {
   gap?: number;
+  style?: any;
   rounded?: number;
   position?: string;
   width?: string;
@@ -10,13 +11,24 @@ export interface HStackProps {
   color?: string;
   backgroundColor?: string;
   alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?: "start" | "space-between" | "space-around" | "space-evenly";
+  justifyContent?:
+    | "start"
+    | "space-between"
+    | "space-around"
+    | "space-evenly"
+    | "center";
+
   sx?: {
     pl?: number;
     pr?: number;
     pt?: number;
     pb?: number;
     padding?: number;
+    ml?: number;
+    mr?: number;
+    mt?: number;
+    mb?: number;
+    margin?: number;
     backgroundColor?: string;
   };
   wrap?: "wrap" | "nowrap";
@@ -35,23 +47,24 @@ export interface HStackProps {
 export const StyledHStack = styled.div<HStackProps>`
   display: flex;
   flex-direction: row;
-  width: 100% !important;
   gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
-
   width: ${(props) => (props.width ? props.width : "auto")} !important;
   height: ${(props) => (props.height ? props.height : "auto")} !important;
-
   position: ${(props) => props.position && props.position} !important;
-
+  // Padding
   padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
   padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
   padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
   padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
-
+  // Margin
+  margin: ${(props) => props.sx?.margin && props.sx?.margin}px !important;
+  margin-left: ${(props) => props.sx?.ml && props.sx?.ml}px !important;
+  margin-right: ${(props) => props.sx?.mr && props.sx?.mr}px !important;
+  margin-top: ${(props) => props.sx?.mt && props.sx?.mt}px !important;
+  margin-bottom: ${(props) => props.sx?.mb && props.sx?.mb}px important;
   border-radius: ${(props) =>
     props.rounded ? props.rounded : 10}px !important;
-
   color: ${(props) => (props.color ? props.color : "#000")} !important;
   background: ${(props) =>
     props.backgroundColor || props.sx?.backgroundColor
@@ -71,6 +84,7 @@ export const StyledHStack = styled.div<HStackProps>`
 const HStack: FC<HStackProps> = ({
   sx,
   wrap,
+  style,
   width,
   height,
   position,
@@ -84,6 +98,7 @@ const HStack: FC<HStackProps> = ({
   return (
     <StyledHStack
       sx={sx}
+      style={style}
       width={width}
       height={height}
       position={position}

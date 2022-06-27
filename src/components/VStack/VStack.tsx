@@ -2,8 +2,10 @@ import React, { FC } from "react";
 import styled from "styled-components";
 
 export interface VStackProps {
+  style?: any;
   gap?: number;
   width?: string;
+  border?: string;
   position?: string;
   height?: string;
   rounded?: number;
@@ -24,12 +26,18 @@ export interface VStackProps {
     pt?: number;
     pb?: number;
     padding?: number;
+    ml?: number;
+    mr?: number;
+    mt?: number;
+    mb?: number;
+    margin?: number;
     backgroundColor?: string;
   };
 }
 
 export const StyledVStack = styled.div<VStackProps>`
   display: flex;
+  border: ${(props) => props.border && `1px solid ${props.border}`} !important;
   flex-direction: column;
   gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
 
@@ -43,6 +51,12 @@ export const StyledVStack = styled.div<VStackProps>`
   padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
   padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
+
+  margin: ${(props) => props.sx?.margin && props.sx?.margin}px !important;
+  margin-left: ${(props) => props.sx?.ml && props.sx?.ml}px !important;
+  margin-right: ${(props) => props.sx?.mr && props.sx?.mr}px !important;
+  margin-top: ${(props) => props.sx?.mt && props.sx?.mt}px !important;
+  margin-bottom: ${(props) => props.sx?.mb && props.sx?.mb}px important;
 
   border-radius: ${(props) => (props.rounded ? props.rounded : 2)}px !important;
   align-items: ${(props) => props.alignItems && props.alignItems} !important;
@@ -67,6 +81,7 @@ export const StyledVStack = styled.div<VStackProps>`
 const VStack: FC<VStackProps> = ({
   sx,
   gap,
+  style,
   width,
   height,
   position,
@@ -81,6 +96,7 @@ const VStack: FC<VStackProps> = ({
   return (
     <StyledVStack
       gap={gap}
+      style={style}
       sx={sx}
       width={width}
       height={height}

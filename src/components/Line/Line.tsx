@@ -3,21 +3,24 @@ import styled from "styled-components";
 
 export interface LineProps {
   width?: number;
+  height?: number;
   borderStyle?: string;
   backgroundColor?: string;
 }
 
 export const StyledHLine = styled.span<LineProps>`
   display: flex;
+  width: ${(props) => (props.width ? props.width : 0)}px !important;
   border-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "#e0e0e0"} !important;
-  border-width: ${(props) => (props.width ? props.width : 0)}px !important;
+  border-width: ${(props) => (props.height ? props.height : 0)}px !important;
   border-style: ${(props) =>
     props.borderStyle ? props.borderStyle : "solid"} !important;
 `;
 
 const Line: FC<LineProps> = ({
   width,
+  height,
   borderStyle,
   backgroundColor,
   ...props
@@ -26,6 +29,7 @@ const Line: FC<LineProps> = ({
     <StyledHLine
       borderStyle={borderStyle}
       width={width}
+      height={height}
       backgroundColor={backgroundColor}
       {...props}
     />

@@ -2,6 +2,7 @@ import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
 
 export interface TextProps {
+  style?: any;
   type?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
   weight?: number;
   size?: number;
@@ -18,6 +19,7 @@ const StyledText = styled.h1<TextProps>`
 `;
 
 const Text: FC<TextProps> = ({
+  style,
   children,
   weight,
   color,
@@ -26,7 +28,14 @@ const Text: FC<TextProps> = ({
   ...props
 }) => {
   return (
-    <StyledText weight={weight} size={size} color={color} {...props} as={type}>
+    <StyledText
+      style={style}
+      weight={weight}
+      size={size}
+      color={color}
+      {...props}
+      as={type}
+    >
       {children}
     </StyledText>
   );

@@ -44,6 +44,7 @@ HeroLayout.args = {
           </Text>
         </HStack>
       </HStack>
+      {/* Hero Items */}
       <VStack alignItems="center" justifyContent="center">
         <Center>
           <VStack alignItems="center">
@@ -62,6 +63,7 @@ HeroLayout.args = {
           </VStack>
         </Center>
       </VStack>
+      {/* About */}
     </>
   ),
 };

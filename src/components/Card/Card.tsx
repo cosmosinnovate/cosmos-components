@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export interface CardProps {
   gap?: number;
+  style?: any;
   width?: string;
   elevation?: number;
   sx?: {
@@ -79,13 +80,20 @@ const StyledCard = styled.div<CardProps>`
 
 const Card: FC<CardProps> = ({
   size,
+  style,
   rounded,
   elevation,
   children,
   ...props
 }) => {
   return (
-    <StyledCard rounded={rounded} size={size} elevation={elevation} {...props}>
+    <StyledCard
+      style={style}
+      rounded={rounded}
+      size={size}
+      elevation={elevation}
+      {...props}
+    >
       {children}
     </StyledCard>
   );
