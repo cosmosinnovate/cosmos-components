@@ -86,7 +86,7 @@ export const Hero = Template.bind({});
 Hero.args = {
   children: (
     <>
-      <VStack backgroundColor="#18A0FB" height="100vh" sx={{ padding: 10 }}>
+      <VStack backgroundColor="#18A0FB" height="100vh">
         {/* Nav Menu */}
         <HStack sx={{ pl: 10, pr: 10, mb: 60 }} justifyContent="space-between">
           <Text type="p">Cosmos Innovaiton</Text>

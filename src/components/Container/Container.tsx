@@ -1,15 +1,15 @@
-import React, { FC, MouseEventHandler } from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
-export interface HStackProps {
+export interface ContainerProps {
   gap?: number;
   style?: any;
-  rounded?: number;
+  maxWidth?: string;
   position?: string;
-  width?: string;
   height?: string;
-  color?: string;
+  rounded?: number;
   backgroundColor?: string;
+  color?: string;
   alignItems?: "center" | "stretch" | "start" | "end";
   justifyContent?:
     | "start"
@@ -17,7 +17,8 @@ export interface HStackProps {
     | "space-around"
     | "space-evenly"
     | "center";
-
+  wrap?: "wrap" | "nowrap";
+  children?: any;
   sx?: {
     pl?: number;
     pr?: number;
@@ -31,88 +32,75 @@ export interface HStackProps {
     margin?: number;
     backgroundColor?: string;
   };
-  wrap?: "wrap" | "nowrap";
-  children?: any;
+  flexDirection?: string;
 }
 
-/**
- * @param backgroundColor?: string
- * @param alignItems?: string
- * @param justifyContent?: string
- * @param rounded?: number;
- * @param gap?: number;
- * @param sx?: object
- * @param children?: component
- */
-export const StyledHStack = styled.div<HStackProps>`
+const StyledContainer = styled.div<ContainerProps>`
   display: flex;
-  flex-direction: row;
-  gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
-  width: ${(props) => (props.width ? props.width : "auto")} !important;
+  gap: ${(props) => props.gap && props.gap}px !important;
+  flex-direction: ${(props) =>
+    props.flexDirection ? props.flexDirection : "column"} !important;
+  max-width: ${(props) =>
+    props.maxWidth ? props.maxWidth : "auto"} !important;
   height: ${(props) => (props.height ? props.height : "auto")} !important;
   position: ${(props) => props.position && props.position} !important;
+
   // Padding
   padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
   padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
   padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
   padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
+
   // Margin
   margin: ${(props) => props.sx?.margin && props.sx?.margin}px !important;
   margin-left: ${(props) => props.sx?.ml && props.sx?.ml}px !important;
   margin-right: ${(props) => props.sx?.mr && props.sx?.mr}px !important;
   margin-top: ${(props) => props.sx?.mt && props.sx?.mt}px !important;
   margin-bottom: ${(props) => props.sx?.mb && props.sx?.mb}px important;
-  border-radius: ${(props) =>
-    props.rounded ? props.rounded : 10}px !important;
+
+  border-radius: ${(props) => (props.rounded ? props.rounded : 2)}px !important;
+  align-items: ${(props) => props.alignItems && props.alignItems} !important;
   color: ${(props) => (props.color ? props.color : "#000")} !important;
   background: ${(props) =>
-    props.backgroundColor || props.sx?.backgroundColor
-      ? props.backgroundColor || props.sx?.backgroundColor
-      : "transparent"} !important;
-  justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : `start`};
-  align-items: ${(props) =>
-    props.alignItems ? props.alignItems : `auto`} !important;
+    props.backgroundColor ? props.backgroundColor : "transparent"} !important;
+  margin: 0px auto;
   @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    flex-wrap: ${(props) => (!props.wrap ? "nowrap" : props.wrap)} !important;
-    padding: 0px !important;
+    margin: 0px auto !important;
   }
 `;
 
-const HStack: FC<HStackProps> = ({
+const Container: FC<ContainerProps> = ({
   sx,
-  wrap,
   style,
-  width,
+  maxWidth,
   height,
   position,
+  color,
   backgroundColor,
   rounded,
   alignItems,
-  justifyContent,
   children,
   ...props
 }) => {
   return (
-    <StyledHStack
+    <StyledContainer
       sx={sx}
       style={style}
-      width={width}
+      maxWidth={maxWidth}
       height={height}
       position={position}
-      wrap={wrap}
+      color={color}
       backgroundColor={backgroundColor}
       rounded={rounded}
       alignItems={alignItems}
-      justifyContent={justifyContent}
       {...props}
     >
       {children}
-    </StyledHStack>
+    </StyledContainer>
   );
 };
 
-export default HStack;
+export default Container;

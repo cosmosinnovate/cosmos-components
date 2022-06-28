@@ -68,7 +68,7 @@ export const StyledArticle = styled.article<ArticleProps>`
   @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    margin: 0px !important;
+    margin: 0px auto !important;
   }
 `;
 

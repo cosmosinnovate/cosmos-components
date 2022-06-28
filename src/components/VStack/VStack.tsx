@@ -69,12 +69,14 @@ export const StyledVStack = styled.div<VStackProps>`
     width: 100% !important;
     flex-grow: 1 !important;
     margin: 0px !important;
+    padding: 0px !important;
   }
 
   @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
     margin: 0px !important;
+    padding: 0px !important;
   }
 `;
 
