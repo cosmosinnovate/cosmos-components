@@ -37,6 +37,7 @@ specifiers:
   rollup-plugin-terser: ^7.0.2
   storybook: ^6.5.9
   styled-components: ^5.3.5
+  tslib: ^2.4.0
   typescript: ^4.7.3
 
 dependencies:
@@ -51,7 +52,7 @@ devDependencies:
   '@babel/preset-typescript': 7.17.12_@babel+core@7.18.5
   '@rollup/plugin-commonjs': 22.0.0_rollup@2.75.7
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.75.7
-  '@rollup/plugin-typescript': 8.3.3_okefoyb4o5sittgqayreuhurei
+  '@rollup/plugin-typescript': 8.3.3_g4qkabtmybowem44p7ts7jnbqm
   '@storybook/addon-actions': 6.5.9_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-essentials': 6.5.9_3r56nbsprseojotyevfqazjjbu
   '@storybook/addon-interactions': 6.5.9_l6wbhsyvdbgudx6kx2pdcby734
@@ -78,6 +79,7 @@ devDependencies:
   rollup-plugin-terser: 7.0.2_rollup@2.75.7
   storybook: 6.5.9_xrxvbtylmve4l2tr3vmmqgfp7q
   styled-components: 5.3.5_biqbaboplfbrettd7655fr4n2y
+  tslib: 2.4.0
   typescript: 4.7.4
 
 packages:
@@ -2143,7 +2145,7 @@ packages:
       rollup: 2.75.7
     dev: true
 
-  /@rollup/plugin-typescript/8.3.3_okefoyb4o5sittgqayreuhurei:
+  /@rollup/plugin-typescript/8.3.3_g4qkabtmybowem44p7ts7jnbqm:
     resolution: {integrity: sha512-55L9SyiYu3r/JtqdjhwcwaECXP7JeJ9h1Sg1VWRJKIutla2MdZQodTgcCNybXLMCnqpNLEhS2vGENww98L1npg==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -2157,6 +2159,7 @@ packages:
       '@rollup/pluginutils': 3.1.0_rollup@2.75.7
       resolve: 1.22.1
       rollup: 2.75.7
+      tslib: 2.4.0
       typescript: 4.7.4
     dev: true
 
