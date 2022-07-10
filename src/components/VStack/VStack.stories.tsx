@@ -7,7 +7,7 @@ import Center from "../Center";
 import HStack from "../HStack";
 import Line from "../Line";
 import Text from "../Text";
-import VStack, { VStackProps } from "./VStack";
+import VStack, { ElementProps } from "./VStack";
 
 export default {
   title: "Components/VStack",
@@ -16,7 +16,7 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<VStackProps> = (args) => <VStack {...args} />;
+const Template: Story<ElementProps> = (args) => <VStack {...args} />;
 
 // Reuse that template for creating different stories
 export const ColumnView = Template.bind({});

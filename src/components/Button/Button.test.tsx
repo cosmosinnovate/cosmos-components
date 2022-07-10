@@ -2,11 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import Button from "./Button";
-
-/**
- * Test for these props
- */
-
+// Test for these props
 // size,
 // position,
 // primary,
@@ -15,7 +11,6 @@ import Button from "./Button";
 // elevation,
 // type,
 // children,
-
 describe("Button", () => {
   test("renders the Button component: large", () => {
     render(

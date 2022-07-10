@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import HStack, { HStackProps } from "./HStack";
+import HStack, { ElementProps } from "./HStack";
 import Button from "../Button";
 
 export default {
@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<HStackProps> = (args) => <HStack {...args} />;
+const Template: Story<ElementProps> = (args) => <HStack {...args} />;
 
 // Reuse that template for creating different stories
 export const RowView = Template.bind({});

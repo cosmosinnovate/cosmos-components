@@ -15,10 +15,10 @@ const Template: Story<TextProps> = (args) => <Text {...args} />;
 // Reuse that template for creating different stories
 export const TextView = Template.bind({});
 TextView.args = {
-  type: "h1",
+  type: "span",
   children:
     "I am text. You can change me to anything you want. H1...H6, p, span",
-  color: "pink",
+  color: "#000",
   size: 28,
   weight: 600,
 };

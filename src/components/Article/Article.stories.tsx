@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import Article, { ArticleProps } from "./Article";
+import Article, { ElementProps } from "./Article";
 import "./article.css";
 import Text from "../Text";
 
@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<ArticleProps> = (args) => <Article {...args} />;
+const Template: Story<ElementProps> = (args) => <Article {...args} />;
 
 // Reuse that template for creating different stories
 export const AritcleViewUI = Template.bind({});

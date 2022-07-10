@@ -1,7 +1,7 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
 
-export interface HStackProps {
+export interface ElementProps {
   gap?: number;
   style?: any;
   rounded?: number;
@@ -44,7 +44,7 @@ export interface HStackProps {
  * @param sx?: object
  * @param children?: component
  */
-export const StyledHStack = styled.div<HStackProps>`
+export const StyledHStack = styled.div<ElementProps>`
   display: flex;
   flex-direction: row;
   gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
@@ -82,7 +82,7 @@ export const StyledHStack = styled.div<HStackProps>`
   }
 `;
 
-const HStack: FC<HStackProps> = ({
+const HStack: FC<ElementProps> = ({
   sx,
   wrap,
   style,

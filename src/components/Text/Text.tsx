@@ -9,6 +9,7 @@ export interface TextProps {
   color?: string;
   children?: string;
   textAlign?: "left" | "center" | "right";
+  lineHeight?: string;
 }
 
 const StyledText = styled.h1<TextProps>`
@@ -16,6 +17,7 @@ const StyledText = styled.h1<TextProps>`
   font-size: ${(props) => (props.size ? props.size : 16)}px !important;
   font-weight: ${(props) => props.weight && props.weight} !important;
   color: ${(props) => (props.color ? props.color : "#000")} !important;
+  line-height: ${(props) => props.lineHeight && props.lineHeight} !important;
 `;
 
 const Text: FC<TextProps> = ({
