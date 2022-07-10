@@ -1,39 +1,6 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
-
-export interface ElementProps {
-  gap?: number;
-  style?: any;
-  rounded?: number;
-  position?: string;
-  width?: string;
-  height?: string;
-  color?: string;
-  backgroundColor?: string;
-  alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?:
-    | "start"
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
-    | "center";
-
-  sx?: {
-    pl?: number;
-    pr?: number;
-    pt?: number;
-    pb?: number;
-    padding?: number;
-    ml?: number;
-    mr?: number;
-    mt?: number;
-    mb?: number;
-    margin?: number;
-    backgroundColor?: string;
-  };
-  wrap?: "wrap" | "nowrap";
-  children?: any;
-}
+import { ElementProps } from "../interfaces";
 
 /**
  * @param backgroundColor?: string

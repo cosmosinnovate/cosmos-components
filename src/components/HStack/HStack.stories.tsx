@@ -1,8 +1,9 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 import { Story } from "@storybook/react";
-import HStack, { ElementProps } from "./HStack";
+import HStack from "./HStack";
 import Button from "../Button";
+import { ElementProps } from "../interfaces";
 
 export default {
   title: "Components/HStack",
@@ -20,9 +21,7 @@ RowView.args = {
     <Button
       width={200}
       type={"button"}
-      onClick={function (
-        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-      ): void {
+      onClick={function (): void {
         throw new Error("Function not implemented.");
       }}
     >
@@ -31,9 +30,7 @@ RowView.args = {
     <Button
       width={200}
       type={"button"}
-      onClick={function (
-        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-      ): void {
+      onClick={function (): void {
         throw new Error("Function not implemented.");
       }}
     >
@@ -42,9 +39,7 @@ RowView.args = {
     <Button
       width={200}
       type={"button"}
-      onClick={function (
-        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-      ): void {
+      onClick={function (): void {
         throw new Error("Function not implemented.");
       }}
     >

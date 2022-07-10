@@ -1,13 +1,13 @@
 import { Story } from "@storybook/react";
 import { Meta } from "@storybook/react/types-6-0";
-import { default as React, Fragment } from "react";
+import { default as React } from "react";
 import Article from "../Article";
 import Button from "../Button";
-import Center from "../Center";
 import HStack from "../HStack";
 import Line from "../Line";
 import Text from "../Text";
-import VStack, { ElementProps } from "./VStack";
+import VStack from "./VStack";
+import { ElementProps } from "../interfaces";
 
 export default {
   title: "Components/VStack",
