@@ -8,7 +8,7 @@ export interface ElementProps {
   style?: any;
   rounded?: number;
   maxWidth?: string;
-  flexDirection: "row" | "column";
+  flexDirection?: "row" | "column";
   position?: string;
   width?: string;
   height?: string;
