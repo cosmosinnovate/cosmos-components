@@ -13,6 +13,7 @@ export interface ElementProps {
   width?: string;
   height?: string;
   color?: string;
+  className?: any;
   border?: string;
   backgroundColor?: string;
   alignItems?: "center" | "stretch" | "start" | "end";

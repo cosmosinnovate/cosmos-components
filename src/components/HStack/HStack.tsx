@@ -45,7 +45,6 @@ export const StyledHStack = styled.div<ElementProps>`
     width: 100% !important;
     flex-grow: 1 !important;
     flex-wrap: ${(props) => (!props.wrap ? "nowrap" : props.wrap)} !important;
-    padding: 0px !important;
   }
 `;
 
@@ -59,12 +58,14 @@ const HStack: FC<ElementProps> = ({
   backgroundColor,
   rounded,
   alignItems,
+  className,
   justifyContent,
   children,
   ...props
 }) => {
   return (
     <StyledHStack
+      className={className}
       sx={sx}
       style={style}
       width={width}

@@ -8,6 +8,7 @@ import Line from "../Line";
 import Text from "../Text";
 import VStack from "./VStack";
 import { ElementProps } from "../interfaces";
+import Navbar from "../Navbar";
 
 export default {
   title: "Components/VStack",
@@ -86,28 +87,41 @@ export const Hero = Template.bind({});
 Hero.args = {
   children: (
     <>
-      <VStack backgroundColor="#18A0FB" height="100vh">
-        {/* Nav Menu */}
-        <HStack sx={{ pl: 10, pr: 10, mb: 60 }} justifyContent="space-between">
-          <Text type="p">Cosmos Innovaiton</Text>
-          <HStack>
-            <Text type="p" color="#FFF">
-              About
-            </Text>
-            <Text type="p" color="#FFF">
-              Process
-            </Text>
-            <Text type="p" color="#FFF">
-              Investments
-            </Text>
-            <Text type="p" color="#FFF">
-              Startups
-            </Text>
-            <Text type="p" color="#FFF">
-              Blog
-            </Text>
+      <VStack backgroundColor="#18A0FB" height="100%">
+        {/* Navbar */}
+        <Navbar
+          elevation={1}
+          menuColor="white"
+          logoImage="https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png"
+          logoWidth={"60px"}
+        >
+          <HStack justifyContent="center" width="100%">
+            <Text weight={500}>Home</Text>
           </HStack>
-        </HStack>
+          <HStack wrap="wrap" justifyContent="center" alignItems="center">
+            <HStack justifyContent="center">
+              <Text weight={300}>About</Text>
+            </HStack>
+            <HStack justifyContent="center">
+              <Text weight={300}>Example</Text>
+            </HStack>
+            <HStack justifyContent="center">
+              <Text type="p" color="#FFF">
+                Investments
+              </Text>
+            </HStack>
+            <HStack justifyContent="center">
+              <Text type="p" color="#FFF">
+                Startups
+              </Text>{" "}
+            </HStack>
+            <HStack justifyContent="center">
+              <Text type="p" color="#FFF">
+                Blog
+              </Text>{" "}
+            </HStack>
+          </HStack>
+        </Navbar>
 
         {/* Hero */}
         <VStack alignItems="center">
