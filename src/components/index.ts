@@ -10,6 +10,10 @@ export { default as Margin } from './Margin';
 export { default as Padding } from './Padding';
 export { default as Font } from './Text';
 export { default as VStack } from './VStack';
+export { default as Navbar } from './Navbar';
+export { default as Modal } from './Modal';
+
+
 
 
 
