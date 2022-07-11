@@ -1,10 +1,9 @@
 import { Story } from "@storybook/react";
 import { Meta } from "@storybook/react/types-6-0";
-import { default as React, Fragment } from "react";
+import { default as React } from "react";
 import HStack from "../HStack";
 import Text from "../Text";
-import VStack from "../VStack";
-import Navbar, { HumburgerMenu, NavbarProps } from "./Navbar";
+import Navbar, { NavbarProps } from "./Navbar";
 
 export default {
   title: "Components/Navbar",
