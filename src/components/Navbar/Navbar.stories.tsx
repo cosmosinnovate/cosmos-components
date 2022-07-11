@@ -22,7 +22,7 @@ NavbarViewWithLogoImage.args = {
     "https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png",
   logoWidth: "60px",
   children: [
-    <HStack width="100%" justifyContent="center" alignItems="center">
+    <HStack justifyContent="center" alignItems="center" width="100%">
       <Text weight={500}>Home</Text>
     </HStack>,
     <HStack wrap="wrap" justifyContent="center" alignItems="center">
@@ -49,7 +49,7 @@ NavbarViewWithLogoText.args = {
   elevation: 1,
   logoText: "Cosmos",
   children: [
-    <HStack justifyContent="center">
+    <HStack alignItems="center" justifyContent="center" width="100%">
       <Text weight={500}>Home</Text>
     </HStack>,
     <HStack wrap="wrap" justifyContent="center" alignItems="center">
@@ -76,7 +76,12 @@ NavbarViewWithNoCenterMenuItem.args = {
   elevation: 1,
   logoText: "Cosmos",
   children: [
-    <HStack wrap="wrap" justifyContent="center" alignItems="center">
+    <HStack
+      wrap="wrap"
+      justifyContent="center"
+      alignItems="center"
+      width="100%"
+    >
       <HStack justifyContent="center">
         <Text weight={300}>About</Text>
       </HStack>
