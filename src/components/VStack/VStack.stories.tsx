@@ -88,18 +88,25 @@ export const Hero = Template.bind({});
 Hero.args = {
   children: (
     <>
-      <VStack backgroundColor="#18A0FB" height="100%" sx={{ padding: 20 }}>
+      <VStack backgroundColor="#18A0FB" height="100%">
         {/* Navbar */}
         <Navbar
+          justifyContent="center"
+          alignItems="center"
           elevation={1}
           menuColor="white"
           logoImage="https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png"
           logoWidth={"60px"}
         >
-          <HStack justifyContent="center" width="100%">
-            <Text weight={500}>Home</Text>
-          </HStack>
-          <HStack wrap="wrap" justifyContent="center" alignItems="center">
+          <HStack
+            wrap="wrap"
+            justifyContent="flex-end"
+            alignItems="center"
+            width="100%"
+          >
+            <HStack justifyContent="center" width="100%">
+              <Text weight={500}>Home</Text>
+            </HStack>
             <HStack justifyContent="center">
               <Text weight={300}>About</Text>
             </HStack>
@@ -124,7 +131,7 @@ Hero.args = {
           </HStack>
         </Navbar>
 
-        <Modal
+        {/* <Modal
           maxWidth={"600px"}
           backgroundColor="#FFF"
           alignItems="center"
@@ -147,7 +154,7 @@ Hero.args = {
               </Text>
             </VStack>
           </HStack>
-        </Modal>
+        </Modal> */}
 
         {/* Hero */}
         <VStack alignItems="center">

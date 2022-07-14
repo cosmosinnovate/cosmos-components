@@ -2,34 +2,9 @@ import React, { FC, useState } from "react";
 import styled from "styled-components";
 import HStack from "../HStack";
 import Text from "../Text";
+import { ElementProps } from "../interfaces";
 
-export interface NavbarProps {
-  style?: any;
-  open?: Function;
-  close?: Function;
-  padding?: string;
-  height?: string;
-  className?: any;
-  children?: any;
-  backgroundColor?: string;
-  position?:
-    | "static"
-    | "absolute"
-    | "fixed"
-    | "relative"
-    | "sticky"
-    | "initial"
-    | "inherit";
-  elevation?: number;
-  display?: string;
-  logoText?: any;
-  menuColor?: string;
-  logoImage?: string;
-  logoWidth?: string;
-  logoHeight?: string;
-}
-
-export const HumburgerMenu = styled.div<NavbarProps>`
+export const HumburgerMenu = styled.div<ElementProps>`
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -51,7 +26,7 @@ export const HumburgerMenu = styled.div<NavbarProps>`
   }
 `;
 
-const CloseHumburgerMenu = styled.div<NavbarProps>`
+const CloseHumburgerMenu = styled.div<ElementProps>`
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -84,7 +59,7 @@ const CloseHumburgerMenu = styled.div<NavbarProps>`
   }
 `;
 
-const StyledNavbar = styled.div<NavbarProps>`
+const StyledNavbar = styled.div<ElementProps>`
   height: ${(props) => props.height && props.height} !important;
   padding: ${(props) =>
     props.padding ? props.padding : "1rem 2rem"} !important;
@@ -97,36 +72,36 @@ const StyledNavbar = styled.div<NavbarProps>`
   }
 `;
 
-export interface MenuProps {
-  isOpen?: boolean;
-}
-
-const Menu = styled.div<MenuProps>`
-  display: flex;
-  flex-direction: row;
-  width: 100% !important;
+const Menu = styled.div<ElementProps>`
+  display: ${(props) => (props.display ? props.display : "flex")};
+  flex-direction: ${(props) =>
+    props.flexDirection ? props.flexDirection : "row"};
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : "flex-start"} !important;
+  width: ${(props) => (props.width ? props.width : "100%")} !important;
   @media (max-width: 768px) {
     flex-grow: 1 !important;
-    justify-content: center !important;
     overflow: hidden;
     flex-direction: column;
-    width: 100%;
-
-    display: ${(props) => props.isOpen && "none"};
+    display: ${(props) => props.isOpen && "none"} !important;
   }
 `;
 
-const Navbar: FC<NavbarProps> = ({
+const Navbar: FC<ElementProps> = ({
   backgroundColor,
   logoText,
   logoImage,
   logoWidth,
   logoHeight,
   height,
+  width,
+  justifyContent,
+  alignItems,
   elevation,
   className,
   children,
   padding,
+  display,
   style,
   open,
   close,
@@ -136,7 +111,9 @@ const Navbar: FC<NavbarProps> = ({
 
   return (
     <StyledNavbar
+      display={display}
       height={height}
+      width={width}
       padding={padding}
       style={style}
       className={className}
@@ -163,7 +140,13 @@ const Navbar: FC<NavbarProps> = ({
             <span />
           </HumburgerMenu>
         )}
-        <Menu isOpen={!menuOpen}>{children}</Menu>
+        <Menu
+          isOpen={!menuOpen}
+          alignItems={alignItems}
+          justifyContent={justifyContent}
+        >
+          {children}
+        </Menu>
       </HStack>
     </StyledNavbar>
   );

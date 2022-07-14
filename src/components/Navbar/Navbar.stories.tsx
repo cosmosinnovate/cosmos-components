@@ -3,7 +3,8 @@ import { Meta } from "@storybook/react/types-6-0";
 import { default as React } from "react";
 import HStack from "../HStack";
 import Text from "../Text";
-import Navbar, { NavbarProps } from "./Navbar";
+import Navbar from "./Navbar";
+import { ElementProps } from "../interfaces";
 
 export default {
   title: "Components/Navbar",
@@ -12,7 +13,7 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<NavbarProps> = (args) => <Navbar {...args} />;
+const Template: Story<ElementProps> = (args) => <Navbar {...args} />;
 
 // Reuse that template for creating different stories
 export const NavbarViewWithLogoImage = Template.bind({});
@@ -74,6 +75,7 @@ NavbarViewWithLogoText.args = {
 export const NavbarViewWithNoCenterMenuItem = Template.bind({});
 NavbarViewWithNoCenterMenuItem.args = {
   elevation: 1,
+  display: "fixed",
   logoText: "Cosmos",
   padding: "5px 10px",
   children: [

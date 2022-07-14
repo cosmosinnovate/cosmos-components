@@ -56,5 +56,15 @@ export interface ElementProps {
     backgroundColor?: string;
   };
   wrap?: "wrap" | "nowrap";
+  open?: Function;
+  close?: Function;
+  isOpen?: boolean;
+  padding?: string;
   children?: any;
+  display?: string;
+  logoText?: any;
+  menuColor?: string;
+  logoImage?: string;
+  logoWidth?: string;
+  logoHeight?: string;
 }
