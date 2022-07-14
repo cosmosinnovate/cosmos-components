@@ -1,41 +1,8 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { ElementProps } from "../interfaces";
 
-export interface ContainerProps {
-  gap?: number;
-  style?: any;
-  maxWidth?: string;
-  position?: string;
-  height?: string;
-  rounded?: number;
-  backgroundColor?: string;
-  color?: string;
-  alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?:
-    | "start"
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
-    | "center";
-  wrap?: "wrap" | "nowrap";
-  children?: any;
-  sx?: {
-    pl?: number;
-    pr?: number;
-    pt?: number;
-    pb?: number;
-    padding?: number;
-    ml?: number;
-    mr?: number;
-    mt?: number;
-    mb?: number;
-    margin?: number;
-    backgroundColor?: string;
-  };
-  flexDirection?: string;
-}
-
-const StyledContainer = styled.div<ContainerProps>`
+const StyledContainer = styled.div<ElementProps>`
   display: flex;
   gap: ${(props) => props.gap && props.gap}px !important;
   flex-direction: ${(props) =>
@@ -72,7 +39,7 @@ const StyledContainer = styled.div<ContainerProps>`
   }
 `;
 
-const Container: FC<ContainerProps> = ({
+const Container: FC<ElementProps> = ({
   sx,
   style,
   maxWidth,

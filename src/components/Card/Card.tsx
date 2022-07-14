@@ -1,36 +1,8 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
+import { ElementProps } from "../interfaces";
 
-export interface CardProps {
-  gap?: number;
-  style?: any;
-  width?: string;
-  elevation?: number;
-  sx?: {
-    backgroundColor?: string;
-    padding?: number;
-    pr?: number;
-    pl?: number;
-    pt?: number;
-    pb?: number;
-  };
-  position?: string;
-  height?: string;
-  rounded?: number;
-  size?: string;
-  backgroundColor?: string;
-  color?: string;
-  alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?:
-    | "start"
-    | "space-between"
-    | "space-around"
-    | "space-evenly"
-    | "center";
-  children?: any;
-}
-
-const StyledCard = styled.div<CardProps>`
+const StyledCard = styled.div<ElementProps>`
   line-height: 1;
   font-size: 16px;
   cursor: pointer;
@@ -78,7 +50,7 @@ const StyledCard = styled.div<CardProps>`
     props.alignItems ? props.alignItems : `auto`} !important;
 `;
 
-const Card: FC<CardProps> = ({
+const Card: FC<ElementProps> = ({
   size,
   style,
   rounded,

@@ -14,16 +14,29 @@ export interface ElementProps {
   height?: string;
   color?: string;
   className?: any;
+  elevation?: number;
   border?: string;
+  size?: "small" | "medium" | "large" | "larger";
   backgroundColor?: string;
-  alignItems?: "center" | "stretch" | "start" | "end";
-  justifyContent?:
+  alignItems?:
+    | "center"
+    | "stretch"
     | "start"
+    | "flex-start"
+    | "flex-end"
+    | "center"
+    | "baseline"
+    | "initial"
+    | "inherit";
+  justifyContent?:
+    | "flex-start"
+    | "flex-end"
+    | "center"
     | "space-between"
     | "space-around"
     | "space-evenly"
-    | "end"
-    | "center";
+    | "initial"
+    | "inherit";
   sx?: {
     pl?: number;
     pr?: number;

@@ -36,7 +36,7 @@ AritcleViewUI.args = {
   gap: 0,
   position: "relative",
   alignItems: "start",
-  justifyContent: "start",
+  justifyContent: "flex-start",
   sx: { padding: 10 },
   color: "#FFF",
 };
