@@ -9,6 +9,7 @@ import Text from "../Text";
 import VStack from "./VStack";
 import { ElementProps } from "../interfaces";
 import Navbar from "../Navbar";
+import Modal from "../Modal";
 
 export default {
   title: "Components/VStack",
@@ -87,7 +88,7 @@ export const Hero = Template.bind({});
 Hero.args = {
   children: (
     <>
-      <VStack backgroundColor="#18A0FB" height="100%">
+      <VStack backgroundColor="#18A0FB" height="100%" sx={{ padding: 20 }}>
         {/* Navbar */}
         <Navbar
           elevation={1}
@@ -123,12 +124,37 @@ Hero.args = {
           </HStack>
         </Navbar>
 
+        <Modal
+          maxWidth={"600px"}
+          backgroundColor="#FFF"
+          alignItems="center"
+          rounded={20}
+          sx={{ padding: 20 }}
+        >
+          <Text>QUALITY SOLUTION</Text>
+
+          <HStack wrap="wrap">
+            <VStack
+              alignItems="center"
+              border="#D8D8D8"
+              rounded={10}
+              sx={{ padding: 10 }}
+            >
+              <Text>TRUSTWORTHY TEAM</Text>
+              <Text weight={300} size={16} textAlign="center">
+                We are a distributed team of engineers and designers ready to
+                serve your startup
+              </Text>
+            </VStack>
+          </HStack>
+        </Modal>
+
         {/* Hero */}
         <VStack alignItems="center">
           <Text
             type="h1"
             weight={800}
-            size={80}
+            size={100 / 2.3}
             color={"#FFF"}
             textAlign="center"
           >

@@ -27,8 +27,8 @@ export const StyledVStack = styled.div<ElementProps>`
     props.justifyContent && props.justifyContent} !important;
   color: ${(props) => (props.color ? props.color : "#000")} !important;
   background: ${(props) =>
-  props.backgroundColor ? props.backgroundColor : "transparent"} !important;
-    
+    props.backgroundColor ? props.backgroundColor : "transparent"} !important;
+
   @media (min-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
@@ -37,10 +37,10 @@ export const StyledVStack = styled.div<ElementProps>`
   }
 
   @media (max-width: 786px) {
-    width: 100% !important;
-    flex-grow: 1 !important;
-    margin: 0px !important;
-    padding: 0px !important;
+    width: 100%;
+    flex-grow: 1;;s
+    margin: 0px;
+    padding: 0px;
   }
 `;
 

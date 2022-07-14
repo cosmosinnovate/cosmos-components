@@ -22,6 +22,7 @@ export interface ElementProps {
     | "space-between"
     | "space-around"
     | "space-evenly"
+    | "end"
     | "center";
   sx?: {
     pl?: number;

@@ -3,9 +3,8 @@ import { Meta } from "@storybook/react/types-6-0";
 import { default as React } from "react";
 import VStack from "../VStack";
 import Text from "../Text";
-import Container from "./Container";
+import Container, { ContainerProps } from "./Container";
 import Padding from "../Padding";
-import { ElementProps } from "../interfaces";
 
 export default {
   title: "Components/Container",
@@ -14,7 +13,7 @@ export default {
 } as Meta;
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<ElementProps> = (args) => <Container {...args} />;
+const Template: Story<ContainerProps> = (args) => <Container {...args} />;
 
 // Reuse that template for creating different stories
 export const ContainerView = Template.bind({});

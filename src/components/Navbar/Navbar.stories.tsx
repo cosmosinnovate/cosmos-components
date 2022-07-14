@@ -76,12 +76,7 @@ NavbarViewWithNoCenterMenuItem.args = {
   elevation: 1,
   logoText: "Cosmos",
   children: [
-    <HStack
-      wrap="wrap"
-      justifyContent="center"
-      alignItems="center"
-      width="100%"
-    >
+    <HStack wrap="wrap" justifyContent="end" alignItems="center" width="100%">
       <HStack justifyContent="center">
         <Text weight={300}>About</Text>
       </HStack>
