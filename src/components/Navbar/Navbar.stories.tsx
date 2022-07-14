@@ -75,6 +75,7 @@ export const NavbarViewWithNoCenterMenuItem = Template.bind({});
 NavbarViewWithNoCenterMenuItem.args = {
   elevation: 1,
   logoText: "Cosmos",
+  padding: "5px 10px",
   children: [
     <HStack
       wrap="wrap"

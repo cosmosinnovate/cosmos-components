@@ -4,8 +4,22 @@ import HStack from "../HStack";
 import Text from "../Text";
 
 export interface NavbarProps {
+  style?: any;
+  open?: Function;
+  close?: Function;
+  padding?: string;
+  height?: string;
+  className?: any;
+  children?: any;
   backgroundColor?: string;
-  position?: "sticky" | "fixed";
+  position?:
+    | "static"
+    | "absolute"
+    | "fixed"
+    | "relative"
+    | "sticky"
+    | "initial"
+    | "inherit";
   elevation?: number;
   display?: string;
   logoText?: any;
@@ -13,17 +27,12 @@ export interface NavbarProps {
   logoImage?: string;
   logoWidth?: string;
   logoHeight?: string;
-  open?: Function;
-  close?: Function;
-  className?: any;
-  children?: any;
 }
 
 export const HumburgerMenu = styled.div<NavbarProps>`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-
   img {
     width: ${(props) => props?.logoWidth && props.logoWidth} !important;
     height: ${(props) => props?.logoHeight && props.logoHeight} !important;
@@ -76,7 +85,9 @@ const CloseHumburgerMenu = styled.div<NavbarProps>`
 `;
 
 const StyledNavbar = styled.div<NavbarProps>`
-  padding: 1rem 2rem !important;
+  height: ${(props) => props.height && props.height} !important;
+  padding: ${(props) =>
+    props.padding ? props.padding : "1rem 2rem"} !important;
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "#18A0FB"} !important;
   box-shadow: ${(props) =>
@@ -111,17 +122,24 @@ const Navbar: FC<NavbarProps> = ({
   logoImage,
   logoWidth,
   logoHeight,
+  height,
   elevation,
   className,
   children,
+  padding,
+  style,
   open,
   close,
   ...props
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <StyledNavbar
-      className=""
+      height={height}
+      padding={padding}
+      style={style}
+      className={className}
       backgroundColor={backgroundColor}
       elevation={elevation}
     >

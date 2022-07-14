@@ -1,6 +1,4 @@
-// Layer props
-// Copied from HStack.
-// Merge this with VStack, Container
+// Read about css properties here: https://www.w3schools.com/cssref/pr_class_position.asp
 
 export interface ElementProps {
   id?: string;
@@ -9,7 +7,14 @@ export interface ElementProps {
   rounded?: number;
   maxWidth?: string;
   flexDirection?: "row" | "column";
-  position?: string;
+  position?:
+    | "static" // Default value. Elements render in order, as they appear in the document flow
+    | "absolute" // The element is positioned relative to its first positioned (not static) ancestor element
+    | "fixed" // The element is positioned relative to the browser window
+    | "relative" // The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position
+    | "sticky" // The element is positioned based on the user's scroll position
+    | "initial" // Sets this property to its default value. Read about initial
+    | "inherit"; //Inherits this property from its parent element. Read about inherit
   width?: string;
   height?: string;
   color?: string;

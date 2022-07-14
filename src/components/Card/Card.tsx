@@ -27,43 +27,53 @@ const StyledCard = styled.div<ElementProps>`
       : `0px 1px 50px rgba(0, 0, 0, 0.0)`} !important;
   width: ${(props) => (props.width ? props.width : "auto")} !important;
   height: ${(props) => (props.height ? props.height : "auto")} !important;
-
   position: ${(props) => props.position && props.position} !important;
-
   padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
   padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
   padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
   padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
-
   border-radius: ${(props) =>
     props.rounded ? props.rounded : 10}px !important;
-
   color: ${(props) => (props.color ? props.color : "#000")} !important;
   background: ${(props) =>
     props.backgroundColor || props.sx?.backgroundColor
       ? props.backgroundColor || props.sx?.backgroundColor
       : "transparent"} !important;
-  justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : `start`};
-  align-items: ${(props) =>
-    props.alignItems ? props.alignItems : `auto`} !important;
+  justify-content: ${(props) => props.justifyContent ? props.justifyContent : `flex-start`};
+  align-items: ${(props) => props.alignItems ? props.alignItems : `inherit`} !important;
 `;
 
 const Card: FC<ElementProps> = ({
   size,
-  style,
   rounded,
+  wrap,
+  style,
+  width,
+  height,
+  position,
+  backgroundColor,
+  alignItems,
+  className,
+  justifyContent,
   elevation,
   children,
   ...props
 }) => {
   return (
     <StyledCard
-      style={style}
-      rounded={rounded}
       size={size}
+      wrap={wrap}
+      style={style}
+      width={width}
+      height={height}
+      rounded={rounded}
+      position={position}
       elevation={elevation}
+      className={className}
+      alignItems={alignItems}
+      justifyContent={justifyContent}
+      backgroundColor={backgroundColor}
       {...props}
     >
       {children}
