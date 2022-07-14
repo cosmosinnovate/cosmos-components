@@ -105,13 +105,13 @@ const Menu = styled.div<MenuProps>`
   display: flex;
   flex-direction: row;
   width: 100% !important;
-  justify-content: space-between !important;
-  align-items: center !important;
   @media (max-width: 768px) {
     flex-grow: 1 !important;
+    justify-content: center !important;
     overflow: hidden;
     flex-direction: column;
     width: 100%;
+
     display: ${(props) => props.isOpen && "none"};
   }
 `;

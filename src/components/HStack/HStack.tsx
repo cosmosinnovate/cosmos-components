@@ -38,7 +38,7 @@ export const StyledHStack = styled.div<ElementProps>`
       ? props.backgroundColor || props.sx?.backgroundColor
       : "transparent"} !important;
   justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : `start`};
+    props.justifyContent ? props.justifyContent : `flex-start`} !important;
   align-items: ${(props) =>
     props.alignItems ? props.alignItems : `auto`} !important;
   @media (max-width: 786px) {
