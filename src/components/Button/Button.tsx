@@ -44,8 +44,8 @@ const StyledButton = styled.button<ButtonProps>`
     props.backgroundColor ? props.backgroundColor : "#18A0FB"} !important;
   box-shadow: ${(props) =>
     props.elevation
-      ? `0px 1x 0.5rem rgba(0, 0, 0, 0.${props.elevation})`
-      : `0px 1px 0.5rem rgba(0, 0, 0, 0.3)`};
+      ? `0px 1x 0.9rem rgba(0, 0, 0, 0.${props.elevation})`
+      : `0px 1px 0.9rem rgba(0, 0, 0, 0.3)`};
 
   // On small screen, take the whole width unless user selects button width
   // Rippled effect
