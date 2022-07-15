@@ -36,6 +36,7 @@ s
     flex-grow: 1 !important;
     diplay: block !important;
     margin: 0px auto !important;
+    height: 100% !important;
   }
 
   @media (min-width: 768px) {
