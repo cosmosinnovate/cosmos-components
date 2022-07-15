@@ -6,7 +6,7 @@
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook && rollup -c",
     "test": "jest"
   },
   "author": "Taban Cosmos",

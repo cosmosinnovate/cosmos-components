@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ElementProps } from "../interfaces";
 
 export const StyledArticle = styled.article<ElementProps>`
-  display: flex;
   gap: ${(props) => props.gap && props.gap}px !important;
   flex-direction: ${(props) =>
     props.flexDirection ? props.flexDirection : "column"} !important;
@@ -20,24 +19,27 @@ export const StyledArticle = styled.article<ElementProps>`
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
 
   // Margin
-  margin: ${(props) =>
-    props.sx?.margin ? props.sx?.margin : "0px auto"}px !important;
+  margin: ${(props) => props.sx?.margin && props.sx?.margin}px !important;
   margin-left: ${(props) => props.sx?.ml && props.sx?.ml}px !important;
   margin-right: ${(props) => props.sx?.mr && props.sx?.mr}px !important;
   margin-top: ${(props) => props.sx?.mt && props.sx?.mt}px !important;
   margin-bottom: ${(props) => props.sx?.mb && props.sx?.mb}px important;
-
+s
   border-radius: ${(props) => (props.rounded ? props.rounded : 2)}px !important;
   align-items: ${(props) => props.alignItems && props.alignItems} !important;
   color: ${(props) => (props.color ? props.color : "#000")} !important;
   background: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "transparent"} !important;
-
+  margin: 0px auto;
   @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    display: block !important;
-    clear: both;
+    diplay: block !important;
+    margin: 0px auto !important;
+  }
+
+  @media (min-width: 768px) {
+    diplay: block !important;
   }
 `;
 
