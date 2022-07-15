@@ -192,14 +192,96 @@ Hero.args = {
       <Article
         height="100vh"
         alignItems="center"
+        justifyContent="center"
         maxWidth="1200px"
         flexDirection="column"
         gap={40}
         sx={{ mt: 40 }}
       >
-        <Text type="h2" size={50}>
-          ABOUT US
+        <HStack justifyContent="center">
+          <Text type="h2" size={50}>
+            ABOUT US
+          </Text>
+        </HStack>
+        <Text type="h2" textAlign="center" weight={400} size={20}>
+          Our goal is to help entrepreneurs go to market rapidly at an afforable
+          cost without compromising the build quality of their software product.
+          We want to be your solutions provider and succeed with you.
         </Text>
+
+        <HStack wrap="wrap">
+          <VStack
+            alignItems="center"
+            border="#D8D8D8"
+            rounded={10}
+            sx={{ padding: 10 }}
+          >
+            <Text>TRUSTWORTHY TEAM</Text>
+            <Line backgroundColor="#18A0FB" height={2} width={50} />
+            <Text weight={300} size={16} textAlign="center">
+              We are a distributed team of engineers and designers ready to
+              serve your startup
+            </Text>
+          </VStack>
+
+          <VStack
+            alignItems="center"
+            border="#D8D8D8"
+            rounded={10}
+            sx={{ padding: 10 }}
+          >
+            <Text>IMPACT DRIVEN</Text>
+            <Line backgroundColor="#18A0FB" height={2} width={50} />
+            <Text weight={300} size={16} textAlign="center">
+              We are a distributed team of engineers and designers ready to
+              serve your startup
+            </Text>
+          </VStack>
+
+          <VStack
+            alignItems="center"
+            border="#D8D8D8"
+            rounded={10}
+            sx={{ padding: 10 }}
+          >
+            <Text>QUALITY SOLUTION</Text>
+            <Line backgroundColor="#18A0FB" height={2} width={50} />
+            <Text weight={300} size={16} textAlign="center">
+              We are a distributed team of engineers and designers ready to
+              serve your startup
+            </Text>
+          </VStack>
+
+          <VStack
+            alignItems="center"
+            border="#D8D8D8"
+            rounded={10}
+            sx={{ padding: 10 }}
+          >
+            <Text>STARTUP EXPERIENCE</Text>
+            <Line backgroundColor="#18A0FB" height={2} width={50} />
+            <Text weight={300} size={16} textAlign="center">
+              We are a distributed team of engineers and designers ready to
+              serve your startup
+            </Text>
+          </VStack>
+        </HStack>
+      </Article>
+
+      <Article
+        height="100vh"
+        alignItems="center"
+        justifyContent="center"
+        maxWidth="1200px"
+        flexDirection="column"
+        gap={40}
+        sx={{ mt: 40 }}
+      >
+        <HStack justifyContent="center">
+          <Text type="h2" size={50}>
+            ABOUT US
+          </Text>
+        </HStack>
         <Text type="h2" textAlign="center" weight={400} size={20}>
           Our goal is to help entrepreneurs go to market rapidly at an afforable
           cost without compromising the build quality of their software product.

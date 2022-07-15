@@ -20,7 +20,8 @@ export const StyledArticle = styled.article<ElementProps>`
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
 
   // Margin
-  margin: ${(props) => props.sx?.margin && props.sx?.margin}px !important;
+  margin: ${(props) =>
+    props.sx?.margin ? props.sx?.margin : "0px auto"}px !important;
   margin-left: ${(props) => props.sx?.ml && props.sx?.ml}px !important;
   margin-right: ${(props) => props.sx?.mr && props.sx?.mr}px !important;
   margin-top: ${(props) => props.sx?.mt && props.sx?.mt}px !important;
@@ -31,11 +32,12 @@ export const StyledArticle = styled.article<ElementProps>`
   color: ${(props) => (props.color ? props.color : "#000")} !important;
   background: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "transparent"} !important;
-  margin: 0px auto;
+
   @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    margin: 0px auto !important;
+    display: block !important;
+    clear: both;
   }
 `;
 
