@@ -18,7 +18,7 @@ Primary.args = {
   children: "Primary 😃",
   type: "button",
   onClick: () => {
-    alert("I am primary button");
+    console.log("I am primary button");
   },
 };
 
@@ -26,8 +26,9 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   ...Primary.args,
   children: "Secondary 😇",
+  rounded: 20,
   type: "button",
   onClick: () => {
-    alert("I am secondary button");
+    console.log("I am secondary button");
   },
 };

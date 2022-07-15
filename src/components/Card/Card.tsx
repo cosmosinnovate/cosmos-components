@@ -1,4 +1,4 @@
-import React, { FC, MouseEventHandler } from "react";
+import React, { FC, MouseEventHandler, useEffect } from "react";
 import styled from "styled-components";
 import { ElementProps } from "../interfaces";
 
@@ -40,8 +40,25 @@ const StyledCard = styled.div<ElementProps>`
     props.backgroundColor || props.sx?.backgroundColor
       ? props.backgroundColor || props.sx?.backgroundColor
       : "transparent"} !important;
-  justify-content: ${(props) => props.justifyContent ? props.justifyContent : `flex-start`};
-  align-items: ${(props) => props.alignItems ? props.alignItems : `inherit`} !important;
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : `flex-start`};
+  align-items: ${(props) =>
+    props.alignItems ? props.alignItems : `inherit`} !important;
+  .ripple {
+    background-color: #aaa;
+    border-radius: 50%;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(0);
+  }
+  .start {
+    transform: scale(0.2);
+  }
+  .active {
+    transform: scale(2);
+    transition: transform 700ms, opacity 700ms;
+    opacity: 0.2;
+  }
 `;
 
 const Card: FC<ElementProps> = ({
@@ -57,7 +74,9 @@ const Card: FC<ElementProps> = ({
   className,
   justifyContent,
   elevation,
+  href,
   children,
+  type,
   ...props
 }) => {
   return (

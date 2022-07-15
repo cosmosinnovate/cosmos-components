@@ -30,9 +30,11 @@ CardElevation.args = {
   alignItems: "center",
   children: [
     // Children inside the card
-    <HStack justifyContent="center">
-      <Font>CardElevation 😃</Font>
-    </HStack>,
+    <a href="https://www.google.com" target="blank">
+      <HStack justifyContent="center">
+        <Font>CardElevation 😃</Font>
+      </HStack>
+    </a>,
   ],
   elevation: 1,
 };

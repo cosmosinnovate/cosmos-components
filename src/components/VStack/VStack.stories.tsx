@@ -10,6 +10,7 @@ import VStack from "./VStack";
 import { ElementProps } from "../interfaces";
 import Navbar from "../Navbar";
 import Modal from "../Modal";
+import { CSSTransition } from "react-transition-group"; // ES6
 
 export default {
   title: "Components/VStack",
@@ -91,7 +92,7 @@ Hero.args = {
       <VStack backgroundColor="#18A0FB" height="100%">
         {/* Navbar */}
         <Navbar
-          justifyContent="center"
+          justifyContent="space-between"
           alignItems="center"
           elevation={1}
           menuColor="white"
@@ -100,7 +101,7 @@ Hero.args = {
         >
           <HStack
             wrap="wrap"
-            justifyContent="flex-end"
+            justifyContent="center"
             alignItems="center"
             width="100%"
           >
@@ -173,8 +174,9 @@ Hero.args = {
           <Button
             size={"medium"}
             type={"button"}
-            elevation={1}
-            onClick={() => alert("We are still under construction")}
+            elevation={5}
+            backgroundColor={"#000"}
+            onClick={() => console.log("We are still under construction")}
             width={200}
             rounded={40}
           >
@@ -183,7 +185,7 @@ Hero.args = {
             </Text>
           </Button>
         </VStack>
-        <VStack alignItems="center"></VStack>
+        <VStack alignItems="center" height="50px"></VStack>
       </VStack>
 
       {/* About */}

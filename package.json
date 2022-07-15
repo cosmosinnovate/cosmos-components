@@ -62,6 +62,7 @@
     "dist"
   ],
   "dependencies": {
+    "@types/react-transition-group": "^4.4.5",
     "jest-environment-jsdom": "^28.1.1",
     "postcss": "^8.4.14",
     "rollup-plugin-postcss": "^4.0.2"

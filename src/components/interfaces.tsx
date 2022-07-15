@@ -6,7 +6,24 @@ export interface ElementProps {
   style?: any;
   rounded?: number;
   maxWidth?: string;
+  weight?: number;
   flexDirection?: "row" | "column";
+  textAlign?: "left" | "center" | "right";
+  type?:
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "p"
+    | "span"
+    | "a"
+    | "div"
+    | "section"
+    | "main";
+  href?: string;
+  lineHeight?: string;
   position?:
     | "static" // Default value. Elements render in order, as they appear in the document flow
     | "absolute" // The element is positioned relative to its first positioned (not static) ancestor element
@@ -21,7 +38,7 @@ export interface ElementProps {
   className?: any;
   elevation?: number;
   border?: string;
-  size?: "small" | "medium" | "large" | "larger";
+  size?: "small" | "medium" | "large" | "larger" | number | undefined;
   backgroundColor?: string;
   alignItems?:
     | "center"

@@ -1,18 +1,8 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
+import { ElementProps } from "../interfaces";
 
-export interface TextProps {
-  style?: any;
-  type?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
-  weight?: number;
-  size?: number;
-  color?: string;
-  children?: string;
-  textAlign?: "left" | "center" | "right";
-  lineHeight?: string;
-}
-
-const StyledText = styled.h1<TextProps>`
+const StyledText = styled.h1<ElementProps>`
   text-align: ${(props) => props.textAlign && props.textAlign} !important;
   font-size: ${(props) => (props.size ? props.size : 16)}px !important;
   font-weight: ${(props) => props.weight && props.weight} !important;
@@ -20,7 +10,7 @@ const StyledText = styled.h1<TextProps>`
   line-height: ${(props) => props.lineHeight && props.lineHeight} !important;
 `;
 
-const Text: FC<TextProps> = ({
+const Text: FC<ElementProps> = ({
   style,
   children,
   weight,
