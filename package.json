@@ -4,9 +4,9 @@
   "description": "A simple react components for web layout",
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "",
+    "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook && rollup -c",
+    "build-storybook": "build-storybook",
     "test": "jest"
   },
   "author": "Taban Cosmos",
