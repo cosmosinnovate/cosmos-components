@@ -1,6 +1,6 @@
 {
   "name": "cosmos-cmp-ui",
-  "version": "4.5.7",
+  "version": "4.5.8",
   "description": "A simple react components for web layout",
   "types": "dist/index.d.ts",
   "scripts": {
