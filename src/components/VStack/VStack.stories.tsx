@@ -92,7 +92,7 @@ Hero.args = {
         <Navbar
           justifyContent="space-between"
           alignItems="center"
-          elevation={1}
+          elevation={4}
           menuColor="white"
           logoImage="https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png"
           logoWidth={"60px"}

@@ -75,7 +75,9 @@ const StyledNavbar = styled.div<ElementProps>`
   background-color: ${(props) =>
     props.backgroundColor ? props.backgroundColor : "#18A0FB"};
   box-shadow: ${(props) =>
-    props.elevation && `0px 1px 50px rgba(0, 0, 0, 0.${props.elevation})`};
+    props.elevation
+      ? `0px 1px 50px rgba(0, 0, 0, 0.${props.elevation})`
+      : `0px 1px 50px rgba(0, 0, 0, 0.0)`};
   @media (max-width: 786px) {
     flex-wrap: wrap;
   }
