@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { ElementProps } from "../interfaces";
+import "./article.css";
 
 export const StyledArticle = styled.article<ElementProps>`
   gap: ${(props) => props.gap && props.gap}px !important;
@@ -10,21 +11,18 @@ export const StyledArticle = styled.article<ElementProps>`
     props.maxWidth ? props.maxWidth : "auto"} !important;
   height: ${(props) => (props.height ? props.height : "auto")} !important;
   position: ${(props) => props.position && props.position} !important;
-
   // Padding
   padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
   padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
   padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
   padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
   padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
-
   // Margin
   margin: ${(props) => props.sx?.margin && props.sx?.margin}px !important;
   margin-left: ${(props) => props.sx?.ml && props.sx?.ml}px !important;
   margin-right: ${(props) => props.sx?.mr && props.sx?.mr}px !important;
   margin-top: ${(props) => props.sx?.mt && props.sx?.mt}px !important;
   margin-bottom: ${(props) => props.sx?.mb && props.sx?.mb}px important;
-s
   border-radius: ${(props) => (props.rounded ? props.rounded : 2)}px !important;
   align-items: ${(props) => props.alignItems && props.alignItems} !important;
   color: ${(props) => (props.color ? props.color : "#000")} !important;

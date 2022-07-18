@@ -1,5 +1,7 @@
 // Read about css properties here: https://www.w3schools.com/cssref/pr_class_position.asp
 
+import { ReactNode } from "react";
+
 export interface ElementProps {
   id?: string;
   gap?: number;
@@ -35,7 +37,7 @@ export interface ElementProps {
   width?: string;
   height?: string;
   color?: string;
-  className?: any;
+  className?: string;
   elevation?: number;
   border?: string;
   size?: "small" | "medium" | "large" | "larger" | number | undefined;
@@ -77,7 +79,7 @@ export interface ElementProps {
   close?: Function;
   isOpen?: boolean;
   padding?: string;
-  children?: any;
+  children?: ReactNode;
   display?: string;
   logoText?: any;
   menuColor?: string;

@@ -7,7 +7,6 @@ export const StyledVStack = styled.div<ElementProps>`
   border: ${(props) => props.border && `1px solid ${props.border}`} !important;
   flex-direction: column;
   gap: ${(props) => (props.gap ? props.gap : 10)}px !important;
-
   width: ${(props) => (props.width ? props.width : "auto")} !important;
   height: ${(props) => (props.height ? props.height : "auto")} !important;
   position: ${(props) => props.position && props.position} !important;
@@ -52,6 +51,7 @@ const VStack: FC<ElementProps> = ({
   height,
   position,
   color,
+  className,
   backgroundColor,
   rounded,
   alignItems,

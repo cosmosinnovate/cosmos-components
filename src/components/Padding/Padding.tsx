@@ -7,7 +7,7 @@ export interface PaddingProps {
 }
 
 const StyledPadding = styled.span<PaddingProps>`
-  padding: ${(props) => (props.padding ? props.padding : 6)}px !important;
+  padding: ${(props) => (props.padding ? props.padding : 6)}px;
 `;
 
 const Padding: FC<PaddingProps> = ({ padding, children, ...props }) => {

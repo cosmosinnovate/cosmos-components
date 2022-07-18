@@ -11,11 +11,9 @@ export interface LineProps {
 export const StyledHLine = styled.span<LineProps>`
   display: flex;
   width: ${(props) => (props.width ? props.width : 0)}px !important;
-  border-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "#e0e0e0"} !important;
-  border-width: ${(props) => (props.height ? props.height : 0)}px !important;
-  border-style: ${(props) =>
-    props.borderStyle ? props.borderStyle : "solid"} !important;
+  border-color: ${(props) => props.backgroundColor ? props.backgroundColor : "#e0e0e0"};
+  border-width: ${(props) => (props.height ? props.height : 0)}pxt;
+  border-style: ${(props) => (props.borderStyle ? props.borderStyle : "solid")};
 `;
 
 const Line: FC<LineProps> = ({

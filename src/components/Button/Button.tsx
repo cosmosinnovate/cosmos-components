@@ -27,21 +27,21 @@ const StyledButton = styled.button<ButtonProps>`
   // padding: 1rem 2rem;
   font-size: 1.5rem;
   outline: 0;
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)} !important;
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   cursor: pointer;
   border-radius: ${(props) =>
-    props.rounded ? `${props.rounded}px` : "0.25rem"} !important;
-  width: ${(props) => (props.width ? `${props.width}px` : "100%")} !important;
+    props.rounded ? `${props.rounded}px` : "0.25rem"};
+  width: ${(props) => (props.width ? `${props.width}px` : "100%")};
   border: 0;
-  color: ${(props) => (props.primary ? "#1b116e" : "#FFFFFF")} !important;
+  color: ${(props) => (props.primary ? "#1b116e" : "#FFFFFF")};
   padding: ${(props) =>
     props.size === "small"
       ? "10px"
       : props.size === "medium"
       ? "16px"
-      : "22px"} !important;
+      : "22px"};
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "#18A0FB"} !important;
+    props.backgroundColor ? props.backgroundColor : "#18A0FB"};
   box-shadow: ${(props) =>
     props.elevation
       ? `0px 1x 0.9rem rgba(0, 0, 0, 0.${props.elevation})`

@@ -1,8 +1,18 @@
 import React, { FC, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import HStack from "../HStack";
 import Text from "../Text";
 import { ElementProps } from "../interfaces";
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+`;
 
 export const HumburgerMenu = styled.div<ElementProps>`
   display: flex;
@@ -30,6 +40,8 @@ const CloseHumburgerMenu = styled.div<ElementProps>`
   display: flex;
   cursor: pointer;
   justify-content: center;
+  animation: ${rotate} 0.5s linear;
+
   img {
     width: ${(props) => props?.logoWidth && props.logoWidth} !important;
     height: ${(props) => props?.logoHeight && props.logoHeight} !important;
@@ -41,7 +53,6 @@ const CloseHumburgerMenu = styled.div<ElementProps>`
     background: ${(props) => (props.menuColor ? props.menuColor : "#000")};
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    // transition: ease 0.3s, transform ease 0.3s 0.3s;
   }
   span.two {
     z-index: 2;
@@ -49,26 +60,24 @@ const CloseHumburgerMenu = styled.div<ElementProps>`
     width: 25px;
     background: ${(props) => (props.menuColor ? props.menuColor : "#000")};
     -ms-transform: rotate(45deg);
-    // transition: ease 0.3s, transform ease 0.3s 0.3s;
     transform: rotate(-45deg);
   }
   @media (min-width: 786px) {
     display: none;
     margin: 0;
-    margin: 0;
+    padding: 0;
   }
 `;
 
 const StyledNavbar = styled.div<ElementProps>`
-  height: ${(props) => props.height && props.height} !important;
-  padding: ${(props) =>
-    props.padding ? props.padding : "1rem 2rem"} !important;
+  height: ${(props) => props.height && props.height};
+  padding: ${(props) => (props.padding ? props.padding : "1rem 2rem")};
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "#18A0FB"} !important;
+    props.backgroundColor ? props.backgroundColor : "#18A0FB"};
   box-shadow: ${(props) =>
     props.elevation && `0px 1px 50px rgba(0, 0, 0, 0.${props.elevation})`};
   @media (max-width: 786px) {
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
   }
 `;
 
@@ -77,13 +86,15 @@ const Menu = styled.div<ElementProps>`
   flex-direction: ${(props) =>
     props.flexDirection ? props.flexDirection : "row"};
   justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : "flex-start"} !important;
-  width: ${(props) => (props.width ? props.width : "100%")} !important;
+    props.justifyContent ? props.justifyContent : "flex-start"};
+  width: ${(props) => (props.width ? props.width : "100%")};
   @media (max-width: 768px) {
-    flex-grow: 1 !important;
     overflow: hidden;
     flex-direction: column;
-    display: ${(props) => props.isOpen && "none"} !important;
+    display: ${(props) => (!props.isOpen ? "absolute" : "none")} !important;
+  }
+  .menu {
+    animation-timing-function: ease-in;
   }
 `;
 
@@ -141,6 +152,7 @@ const Navbar: FC<ElementProps> = ({
           </HumburgerMenu>
         )}
         <Menu
+          className="menu"
           isOpen={!menuOpen}
           alignItems={alignItems}
           justifyContent={justifyContent}

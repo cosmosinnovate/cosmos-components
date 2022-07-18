@@ -19,7 +19,10 @@ const Template: Story<ElementProps> = (args) => <Article {...args} />;
 export const AritcleViewUI = Template.bind({});
 AritcleViewUI.args = {
   children: [
-    <p> What is Lorem Ipsum?</p>,
+    <Text type="h2" size={200}>
+      {" "}
+      What is Lorem Ipsum?
+    </Text>,
     <Text type="p" color="black">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the

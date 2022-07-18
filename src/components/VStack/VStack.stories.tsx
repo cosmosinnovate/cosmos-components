@@ -4,13 +4,11 @@ import { default as React } from "react";
 import Article from "../Article";
 import Button from "../Button";
 import HStack from "../HStack";
+import { ElementProps } from "../interfaces";
 import Line from "../Line";
+import Navbar from "../Navbar";
 import Text from "../Text";
 import VStack from "./VStack";
-import { ElementProps } from "../interfaces";
-import Navbar from "../Navbar";
-import Modal from "../Modal";
-import { CSSTransition } from "react-transition-group"; // ES6
 
 export default {
   title: "Components/VStack",
@@ -48,7 +46,7 @@ ColumnViewCenter.args = {
 export const ColumnViewUI = Template.bind({});
 ColumnViewUI.args = {
   children: (
-    <VStack>
+    <VStack className="div">
       <Button
         width={200}
         type={"button"}
@@ -89,7 +87,7 @@ export const Hero = Template.bind({});
 Hero.args = {
   children: (
     <>
-      <VStack backgroundColor="#18A0FB" height="100%">
+      <VStack height="100%">
         {/* Navbar */}
         <Navbar
           justifyContent="space-between"
@@ -100,19 +98,26 @@ Hero.args = {
           logoWidth={"60px"}
         >
           <HStack
+            className="menu"
             wrap="wrap"
             justifyContent="center"
             alignItems="center"
             width="100%"
           >
             <HStack justifyContent="center" width="100%">
-              <Text weight={500}>Home</Text>
+              <Text type="p" weight={200}>
+                Home
+              </Text>
             </HStack>
             <HStack justifyContent="center">
-              <Text weight={300}>About</Text>
+              <Text type="p" weight={300}>
+                About
+              </Text>
             </HStack>
             <HStack justifyContent="center">
-              <Text weight={300}>Example</Text>
+              <Text type="p" weight={300}>
+                Example
+              </Text>
             </HStack>
             <HStack justifyContent="center">
               <Text type="p" color="#FFF">
@@ -149,7 +154,7 @@ Hero.args = {
               sx={{ padding: 10 }}
             >
               <Text>TRUSTWORTHY TEAM</Text>
-              <Text weight={300} size={16} textAlign="center">
+              <Text type="p"weight={300} size={16} textAlign="center">
                 We are a distributed team of engineers and designers ready to
                 serve your startup
               </Text>
@@ -203,7 +208,7 @@ Hero.args = {
             ABOUT US
           </Text>
         </HStack>
-        <Text type="h2" textAlign="center" weight={400} size={20}>
+        <Text type="p" textAlign="center" weight={400} size={20}>
           Our goal is to help entrepreneurs go to market rapidly at an afforable
           cost without compromising the build quality of their software product.
           We want to be your solutions provider and succeed with you.
@@ -218,7 +223,7 @@ Hero.args = {
           >
             <Text>TRUSTWORTHY TEAM</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -232,7 +237,7 @@ Hero.args = {
           >
             <Text>IMPACT DRIVEN</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -246,7 +251,7 @@ Hero.args = {
           >
             <Text>QUALITY SOLUTION</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -260,7 +265,7 @@ Hero.args = {
           >
             <Text>STARTUP EXPERIENCE</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -282,7 +287,7 @@ Hero.args = {
             ABOUT US
           </Text>
         </HStack>
-        <Text type="h2" textAlign="center" weight={400} size={20}>
+        <Text type="p" textAlign="center" weight={400} size={20}>
           Our goal is to help entrepreneurs go to market rapidly at an afforable
           cost without compromising the build quality of their software product.
           We want to be your solutions provider and succeed with you.
@@ -297,7 +302,7 @@ Hero.args = {
           >
             <Text>TRUSTWORTHY TEAM</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -311,7 +316,7 @@ Hero.args = {
           >
             <Text>IMPACT DRIVEN</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -325,7 +330,7 @@ Hero.args = {
           >
             <Text>QUALITY SOLUTION</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>
@@ -335,11 +340,11 @@ Hero.args = {
             alignItems="center"
             border="#D8D8D8"
             rounded={10}
-            sx={{ padding: 10 }}
+            sx={{ padding: 20 }}
           >
             <Text>STARTUP EXPERIENCE</Text>
             <Line backgroundColor="#18A0FB" height={2} width={50} />
-            <Text weight={300} size={16} textAlign="center">
+            <Text type="p" weight={300} size={16} textAlign="center">
               We are a distributed team of engineers and designers ready to
               serve your startup
             </Text>

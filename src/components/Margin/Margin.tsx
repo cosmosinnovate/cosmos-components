@@ -7,7 +7,7 @@ export interface MarginProps {
 }
 
 const StyledMargin = styled.span<MarginProps>`
-  margin: ${(props) => (props.margin ? props.margin : 6)}px !important;
+  margin: ${(props) => (props.margin ? props.margin : 6)}px;
 `;
 
 const Margin: FC<MarginProps> = ({ margin, children, ...props }) => {

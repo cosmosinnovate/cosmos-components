@@ -8,42 +8,40 @@ const StyledCard = styled.div<ElementProps>`
   cursor: pointer;
   font-weight: 700;
   font-weight: bold;
-  border-radius: ${(props) => (props.rounded ? props.rounded : 0)}px !important;
+  border-radius: ${(props) => (props.rounded ? props.rounded : 0)}px;
   position: ${(props) => props.position && props.position};
-  width: ${(props) => (props.width ? `${props.width}px` : "100%")} !important;
+  width: ${(props) => (props.width ? `${props.width}px` : "100%")};
   border: 0;
-  color: ${(props) => (props.color ? props.color : "#000")} !important;
+  color: ${(props) => (props.color ? props.color : "#000")};
   padding: ${(props) =>
     props.size === "small"
       ? "10px"
       : props.size === "medium"
       ? "16px"
-      : "22px"} !important;
+      : "22px"};
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "#18A0FB"} !important;
+    props.backgroundColor ? props.backgroundColor : "#18A0FB"};
   box-shadow: ${(props) =>
     props.elevation
       ? `0px 1px 50px rgba(0, 0, 0, 0.${props.elevation})`
-      : `0px 1px 50px rgba(0, 0, 0, 0.0)`} !important;
-  width: ${(props) => (props.width ? props.width : "auto")} !important;
-  height: ${(props) => (props.height ? props.height : "auto")} !important;
-  position: ${(props) => props.position && props.position} !important;
-  padding: ${(props) => props.sx?.padding && props.sx?.padding}px !important;
-  padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px !important;
-  padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px !important;
-  padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px !important;
-  padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px important;
-  border-radius: ${(props) =>
-    props.rounded ? props.rounded : 10}px !important;
-  color: ${(props) => (props.color ? props.color : "#000")} !important;
+      : `0px 1px 50px rgba(0, 0, 0, 0.0)`};
+  width: ${(props) => (props.width ? props.width : "auto")};
+  height: ${(props) => (props.height ? props.height : "auto")};
+  position: ${(props) => props.position && props.position};
+  padding: ${(props) => props.sx?.padding && props.sx?.padding}px;
+  padding-left: ${(props) => props.sx?.pl && props.sx?.pl}px;
+  padding-right: ${(props) => props.sx?.pr && props.sx?.pr}px;
+  padding-top: ${(props) => props.sx?.pt && props.sx?.pt}px;
+  padding-bottom: ${(props) => props.sx?.pb && props.sx?.pb}px;
+  border-radius: ${(props) => (props.rounded ? props.rounded : 10)}px;
+  color: ${(props) => (props.color ? props.color : "#000")};
   background: ${(props) =>
     props.backgroundColor || props.sx?.backgroundColor
       ? props.backgroundColor || props.sx?.backgroundColor
-      : "transparent"} !important;
+      : "transparent"};
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : `flex-start`};
-  align-items: ${(props) =>
-    props.alignItems ? props.alignItems : `inherit`} !important;
+  align-items: ${(props) => (props.alignItems ? props.alignItems : `inherit`)};
   .ripple {
     background-color: #aaa;
     border-radius: 50%;
