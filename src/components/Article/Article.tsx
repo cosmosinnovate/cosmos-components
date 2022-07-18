@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { ElementProps } from "../interfaces";
-import "./article.css";
 
 export const StyledArticle = styled.article<ElementProps>`
   gap: ${(props) => props.gap && props.gap}px !important;
