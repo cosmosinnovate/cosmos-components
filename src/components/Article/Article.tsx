@@ -31,13 +31,13 @@ export const StyledArticle = styled.article<ElementProps>`
   @media (max-width: 786px) {
     width: 100% !important;
     flex-grow: 1 !important;
-    diplay: block !important;
+    display: block !important;
     margin: 0px auto !important;
     height: 100% !important;
   }
 
   @media (min-width: 768px) {
-    diplay: block !important;
+    display: block !important;
   }
 `;
 
